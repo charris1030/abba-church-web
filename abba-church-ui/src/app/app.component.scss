@@ -1,0 +1,221 @@
+.content {
+    padding: 5px;
+    background-color: #fff; //#0f2862;
+    height: 100%;
+}
+
+.logo-image {
+    height: 150px;
+}
+
+.logo-image-nav {
+    height: 150px;
+}
+
+.location {
+    align-content: center;
+}
+
+.welcome {
+    text-align: center;
+    color: #fff;
+}
+
+.center {
+    text-align: center;
+    font-weight: bold;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The Overlay (background) */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed; 
+    z-index: 500; 
+    left: 0;
+    top: 0;
+    background-color: #B8B8B8;
+    opacity: 0.9;
+    overflow-x: hidden; 
+    transition: 0.5s;
+    overflow-y: hidden;
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 5px;
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #0f2862; 
+    display: block; 
+    transition: 0.3s; 
+    &.sub-menu-option {
+        font-size: 20px;
+    }
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #9e363a; // #f1f1f1;
+  }
+
+  .overlay .close {
+      margin-left: 25%;
+      width: 50%;
+      margin-right: 25%;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 75px;
+    font-size: 60px;
+    height: auto;
+  }
+
+   .overlay .close-button {
+       text-align: right !important;
+       font-size: 60px;
+       height: auto;
+  }
+  
+  
+  /* When the height of the screen is less than 450 pixels, 
+  change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+.fa {
+    font-size: 20px !important;
+}
+
+.f-right {
+    float: right;
+    margin-right: 8px;;
+}
+
+.f-left {
+    float: left;
+    margin-left: 10px;;
+}
+
+.abba-title {
+    font-size:30px !important;
+    cursor:pointer !important;
+    color:#0f2862 !important;
+    a{
+        text-decoration: none !important;
+        color:#0f2862 !important;
+        &:hover {
+            text-decoration: none !important;
+            color:#0f2862 !important
+        }
+    }
+}
+
+.top-row {
+    margin-top: 5px !important;
+}
+
+.lang-options {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    height: 45px;
+    background-color: #0f2862;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 100000;
+    a {
+        color: #fff !important;
+        cursor: pointer !important;
+        z-index: -1;
+    }
+    a:hover {
+        color: #B8B8B8 !important;
+    }
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #0f2862; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &.sub-menu-option {
+      margin-left: 10px;
+      font-size: 20px;
+   }
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

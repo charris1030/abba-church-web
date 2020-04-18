@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-12 col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <h5 style="color:#0f2862;">Login</h5>
+    </div>
+    <div class="col-sm-12 col-md-3"></div>
+  </div>
+  <div class="row">
+      <div class="col-sm-12 col-md-3"></div>
+      <div class="col-sm-12 col-md-6">
+          <form>
+              <div class="form-group">
+                  <label for="username">Nome do usuário</label>
+                  <input class="form-control form-control-sm" name="username" [(ngModel)]="username"
+                  id="password" aria-describedby="usernameHelp" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input type="password" class="form-control form-control-sm" name="password" [(ngModel)]="password"
+                  id="password" aria-describedby="passwordHelp" placeholder="">
+                </div>
+                <button (click)=checkLogin() class="btn btn-primary login-button">
+                  Entrar
+                 </button>
+            </form>
+      </div>
+      <div class="col-sm-12 col-md-3"></div>
+  </div>
+</div>

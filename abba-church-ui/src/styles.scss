@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #fff; // #0f2862;
+}
+
+.app-body {
+    background-color: #fff; //#0f2862;
+    height: 100%;
+}
+
+.logo-image-nav {
+    height: 70px;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .site-content {
+    flex: 1;
+  }

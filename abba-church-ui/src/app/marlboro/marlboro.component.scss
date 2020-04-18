@@ -1,0 +1,324 @@
+
+.marlboro {
+    background-color: #091f36; //#fff;
+    min-height: calc(100vh - 150px);
+}
+
+.marlboro-content {
+    background-color: #fff;// #4f5f76;
+    height: 100%;
+}
+
+h4 {
+    color: #fff;
+    font-weight: bold;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .sub {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff; 
+    }
+}
+
+.top-nav {
+   margin-bottom: 5px;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    color: #fff;
+  }
+
+.footer-content {
+    text-align: center;
+    margin-top: 60px;  
+}
+
+.social-media-icon {
+    color: #fff !important;  
+  }
+
+.address {
+    color: #fff;
+    font-weight: bold;
+    text-align: left !important;
+}
+
+.welcome {
+    padding-left: 5px;
+}
+
+.red {
+    color: #9e363a;
+}
+
+.btn-primary:hover {
+    background-color: #4f5f76 !important;  
+    color: #fff !important;
+    border-color: #4f5f76 !important;
+}
+
+.donate-button {
+    background-color: #0f2862;
+    color: #fff !important;
+    border-color: #0f2862 !important;
+}
+
+.account {
+    float: right !important;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.languages {
+    float: right !important;
+    color: #fff;
+    cursor: pointer;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.language-options {
+    position: absolute;
+    height: 50px;
+    background-color: #fff;
+    right: 10px;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #0f2862 !important;
+    border-color: #0f2862 !important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #4f5f76;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff !important;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #091f36;
+    &:hover {
+        color: #fff !important;
+        text-decoration: none;
+        background-color: #091f36 !important;
+    }
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color:#091f36 !important;
+    text-decoration: none;
+    background-color: #fff !important;
+}
+
+.phone-num {
+    a {
+        color:#091f36 !important;
+        &:hover {
+            color:#4f5f76 !important;
+        }
+    }
+}
+
+.address-title {
+    font-weight: bold;
+}
+
+.c-address {
+    a {
+        color:#091f36 !important;
+        &:hover {
+            color:#4f5f76 !important;
+        }
+    }
+}
+
+.m-bottom {
+    margin-bottom: 8px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 10px !important;
+}
+
+.church-title-text {
+display: inline !important;
+color: #fff !important;
+font-size: 20px;
+padding-left: 5px;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    border-radius: 0.25rem;
+    float: right !important;
+}
+
+.bg-light {
+    background-color: inherit !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../../assets/images/icons/justify.svg) !important;
+}
+
+.social-media {
+    a {
+        color:#091f36 !important;
+        cursor: pointer;
+    }
+    a:hover {
+        color:#4f5f76 !important;
+        cursor: pointer;
+    }
+}
+
+.row {
+    margin-right: 0 !important;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.social-media-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    a:hover {
+        color: #9e363a !important;
+    }
+}
+
+.login {
+    float: right;
+}
+
+.section-full {
+    width: 100%;
+    height: 200px;
+}
+
+.section-half {
+    width: 100%;
+    height: 100px;
+}
+
+.white {
+    color: #fff !important;
+    font-size: 18px;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.spacer{
+    margin-top: 5px;
+}
+
+.image-bg {
+    position: relative; 
+    background-image: url("../../assets/images/bible_hands.jpg");
+    background-repeat: no-repeat;
+}
+
+.grey {
+    position: relative; 
+    background-color: #B8B8B8;
+    background-image: url("../../assets/images/bible_hands.jpg");
+    background-repeat: no-repeat;
+}
+
+.banner-top
+{ 
+    position: absolute; 
+    bottom: 0px;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    padding:5px;
+    background-color: #000;
+    opacity: 0.7;
+    height: 50px;
+}
+
+.outer {
+    background-color: #B8B8B8;
+    display: flex;
+    justify-content: center; /* Center content inside */
+    height: 100px;
+    width: 100%;
+  }
+
+  .inner {
+    align-self: flex-end; /* At the bottom of the parent */
+    background-color: #0f2862;
+    width: 100%;
+  }
+
+.light-grey {
+    background-color: #fafafa;
+}
+
+.blue {
+    background-color:#0f2862;
+}
+
+h4, h5 {
+    color: #0f2862 !important;
+}
+
+h6 {
+    color: #9e363a !important;
+}
+
+.section-content {
+    padding: 10px;
+}
