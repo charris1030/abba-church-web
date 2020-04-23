@@ -1,6 +1,6 @@
 <div #navSide id="navSide" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
-  <a *ngIf="language=='pt-br'" href="javascript:void(0)">Sobre Nós</a>
+  <a *ngIf="language=='pt-br'" routerLink="/about-us"  (click)="closeSideNav()">Sobre Nós</a>
   <a *ngIf="language=='pt-br'" href="javascript:void(0)" (click)="showLocationOptions()">Localizações <i  [ngClass]="{'fa-plus': !showLocations, 'fa-minus': showLocations}" class="fa"></i>
   </a>
      <a class="sub-menu-option" *ngIf="language=='pt-br' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
@@ -8,7 +8,7 @@
   <a *ngIf="language=='pt-br'" href="#">Doações</a>
   <a *ngIf="language=='pt-br'" routerLink="/membership" (click)="closeSideNav()">Registro de Membro Online</a>
   <a *ngIf="language=='pt-br'" routerLink="/login" (click)="closeSideNav()">Acessar Conta</a>
-  <a *ngIf="language=='en'" href="#">About Us</a>
+  <a *ngIf="language=='en'" outerLink="/about-us" (click)="closeSideNav()">About Us</a>
   <a *ngIf="language=='en'" href="javascript:void(0)" (click)="showLocationOptions()">Locations <i  [ngClass]="{'fa-plus': !showLocations, 'fa-minus': showLocations}" class="fa"></i></a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/new-hope">New Hope Church Boston</a>
@@ -23,16 +23,16 @@
       <div class="col">
         <span class="abba-title">
         <a routerLink="/">
-        Abba-Church.org
+          <img src="../assets/images/abba-church-logo.png" title="Abba-Church.org">
         </a>
       </span>
       </div>
       <div class="col">
         <div class="f-right">
-          <span (click)="showLanguageOptions()" 
+          <span (click)="showLanguageOptions()"
           *ngIf="language=='pt-br'"
           style="font-size:20px;cursor:pointer;color:#0f2862;margin-right: 1px;">PT</span>
-          <span (click)="showLanguageOptions()" 
+          <span (click)="showLanguageOptions()"
           *ngIf="language=='en'"
           style="font-size:20px;cursor:pointer;color:#0f2862;margin-right: 1px;">EN</span>
           <img (click)="showLanguageOptions()" style="margin-right: 15px; cursor:pointer;" src="../assets/images/icons/chevron-down.svg" alt="" width="20" height="20" title="">
@@ -46,7 +46,7 @@
     </div>
     <div class="row">
       <div class="col">
-        
+
         </div>
         </div>
   </div>

@@ -8,8 +8,11 @@
     <div class="col-sm-12 col-md-3"></div>
   </div>
   <div class="row">
-      <div class="col-sm-12 col-md-3"></div>
+      <div class="col-sm-12 col-md-3">
+      </div>
       <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-body">
           <form>
               <div class="form-group">
                   <label for="username">Nome do usuário</label>
@@ -21,10 +24,24 @@
                   <input type="password" class="form-control form-control-sm" name="password" [(ngModel)]="password"
                   id="password" aria-describedby="passwordHelp" placeholder="">
                 </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div *ngIf="language=='pt-br'">
+                      <span class="no-account">Não tem conta? </span> <a (click)="createNewAccount()">Crie a sua conta aqui</a>
+                      </div>
+                    <div *ngIf="language=='en'">
+                      <span class="no-account">Don't have an account? </span> <a (click)="createNewAccount()">Create one here</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
                 <button (click)=checkLogin() class="btn btn-primary login-button">
                   Entrar
                  </button>
+                </div>
+              </div>
             </form>
+      </div>
+      </div>
       </div>
       <div class="col-sm-12 col-md-3"></div>
   </div>

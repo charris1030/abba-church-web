@@ -31,3 +31,4 @@ build/
 .vscode/
 
 abba-church-ui/node_modules
+/abba-church-ui/dist/

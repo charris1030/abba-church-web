@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,11 @@ const routes: Routes = [
       component: AboutUsComponent,
       pathMatch: 'prefix'
     },
+     {
+          path: 'account',
+          component: AccountComponent,
+          pathMatch: 'prefix'
+     },
   {
     path: '',
     redirectTo: 'home',

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,24 +15,34 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
 import { HomeComponent } from './home/home.component';
 import { LanguageService } from './services/language.service';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { MailService } from './services/mail.service';
+import { AccountComponent } from './account/account.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    MarlboroComponent, 
-    NewHopeComponent, 
-    LoginComponent, 
+    AppComponent,
+    MarlboroComponent,
+    NewHopeComponent,
+    LoginComponent,
     AdminComponent,
     MembershipRegistrationComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [AuthenticationService, AuthGuardService, LanguageService],
+  providers: [
+    AuthenticationService,
+    AuthGuardService,
+    LanguageService,
+    MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

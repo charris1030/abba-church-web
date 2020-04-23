@@ -41,6 +41,7 @@ showLanguageOptions() {
 
 changeLanguage(lang: string) {
   console.warn("Changing Language to ", lang);
+  this.languageService.setLangValue(lang);
   this.languageService.setLanguage(lang);
   this.language = lang;
   this.showLanguageMenu = false;

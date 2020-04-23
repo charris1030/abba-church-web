@@ -9,6 +9,7 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
+  language: string;
   username = 'admin';
   password = '';
   invalidLogin = false;
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthenticationService) { }
 
   ngOnInit() {
+    this.language = 'pt-br';
   }
 
   checkLogin() {
@@ -25,6 +27,10 @@ export class LoginComponent implements OnInit {
       this.invalidLogin = false
     } else
       this.invalidLogin = true
+  }
+
+  createNewAccount() {
+    this.router.navigate(['/account', { action: 'new' }]);
   }
 
 }

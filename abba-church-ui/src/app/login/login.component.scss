@@ -28,9 +28,10 @@
     }
 }
 
-h4 {
-    color: #fff;
+.no-account {
+    font-weight: bold;
 }
+
 
 .back {
     float: right !important;
@@ -38,6 +39,8 @@ h4 {
 }
 
 a {
-    color: #fff !important;
-    text-decoration: none;
+    color:#091f36 !important;
+    &:hover {
+        color:#4f5f76 !important;
+    }
 }
