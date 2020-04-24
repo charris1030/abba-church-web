@@ -52,19 +52,24 @@
           <h4 *ngIf="language == 'en'">Service Schedule</h4>
           <div class="row">
             <div class="col-sm-12 col-md-2">
-              <h6>Domingo</h6>
+              <h6 *ngIf="language == 'pt-br'">Domingo</h6>
+              <h6 *ngIf="language == 'en'">Sunday</h6>
             </div>
             <div class="col-sm-12 col-md-2">
-              <h6>Segundo</h6>
+              <h6 *ngIf="language == 'pt-br'">Segunda</h6>
+              <h6 *ngIf="language == 'en'">Monday</h6>
             </div>
             <div class="col-sm-12 col-md-2">
-              <h6>Quarta</h6>
+              <h6 *ngIf="language == 'pt-br'">Quarta</h6>
+              <h6 *ngIf="language == 'en'">Wednesday</h6>
             </div>
             <div class="col-sm-12 col-md-2">
-              <h6>Sexta</h6>
+              <h6 *ngIf="language == 'pt-br'">Sexta</h6>
+              <h6 *ngIf="language == 'en'">Friday</h6>
             </div>
             <div class="col-sm-12 col-md-2">
-              <h6>Sábado</h6>
+              <h6 *ngIf="language == 'pt-br'">Sábado</h6>
+              <h6 *ngIf="language == 'en'">Saturday</h6>
             </div>
             <div class="col-sm-12 col-md-2">
             </div>
