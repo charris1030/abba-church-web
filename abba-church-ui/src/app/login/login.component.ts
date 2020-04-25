@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
-
+import { LanguageService } from '../services/language.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,10 +15,14 @@ export class LoginComponent implements OnInit {
   invalidLogin = false;
 
   constructor(private router: Router,
-    private authService: AuthenticationService) { }
+  private authService: AuthenticationService, protected languageService: LanguageService) {
+    this.language = this.languageService.getLanguage();
+   }
 
   ngOnInit() {
-    this.language = 'pt-br';
+    this.languageService.getLangValue().subscribe((value) => {
+            this.language = value;
+          });
   }
 
   checkLogin() {

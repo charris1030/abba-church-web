@@ -30,6 +30,6 @@ build/
 ### VS Code ###
 .vscode/
 
-abba-church-ui/node_modules
+./abba-church-ui/node_modules
 abba-church-ui/dist/
-
+/abba-church-ui/node_modules

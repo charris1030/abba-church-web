@@ -18,6 +18,9 @@ export class MarlboroComponent implements OnInit {
 
   ngOnInit() {
     this.titheLink = 'https://tithe.ly/give?c=1302804';
+    this.languageService.getLangValue().subscribe((value) => {
+            this.language = value;
+          });
   }
 
   /**

@@ -15,19 +15,21 @@
           <div class="card-body">
           <form>
               <div class="form-group">
-                  <label for="username">Nome do usuário</label>
+                  <label for="username" *ngIf="language == 'pt-br'">Nome do usuário</label>
+                  <label for="username" *ngIf="language == 'en'">Username</label>
                   <input class="form-control form-control-sm" name="username" [(ngModel)]="username"
                   id="password" aria-describedby="usernameHelp" placeholder="">
                 </div>
                 <div class="form-group">
-                  <label for="password">Senha</label>
+                  <label for="password" *ngIf="language == 'pt-br'">Senha</label>
+                  <label for="password" *ngIf="language == 'en'">Password</label>
                   <input type="password" class="form-control form-control-sm" name="password" [(ngModel)]="password"
                   id="password" aria-describedby="passwordHelp" placeholder="">
                 </div>
                 <div class="row">
                   <div class="col-sm-12 col-md-6">
                     <div *ngIf="language=='pt-br'">
-                      <span class="no-account">Não tem conta? </span> <a (click)="createNewAccount()">Crie a sua conta aqui</a>
+                      <span class="no-account" >Não tem conta? </span> <a (click)="createNewAccount()">Crie a sua conta aqui</a>
                       </div>
                     <div *ngIf="language=='en'">
                       <span class="no-account">Don't have an account? </span> <a (click)="createNewAccount()">Create one here</a>
