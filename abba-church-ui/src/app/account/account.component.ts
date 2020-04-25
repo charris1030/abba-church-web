@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { User } from '../models/user';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-account',
@@ -15,13 +16,15 @@ export class AccountComponent implements OnInit {
   user: User = new User();
 
   constructor(private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute, protected languageService: LanguageService) {
       let action = this.route.snapshot.paramMap.get('action');
       this.action = action;
   }
 
   ngOnInit() {
-      this.language = 'pt-br';
+       this.languageService.getLangValue().subscribe((value) => {
+             this.language = value;
+           });
   }
 
 }

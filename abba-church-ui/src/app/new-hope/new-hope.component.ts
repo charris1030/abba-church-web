@@ -9,5 +9,6 @@ export class NewHopeComponent implements OnInit {
  constructor() { }
 
   ngOnInit() {
+
   }
 }
