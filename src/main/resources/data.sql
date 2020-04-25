@@ -1,9 +1,3 @@
-CREATE TABLE abba_church_users (
-  id INT AUTO_INCREMENT  PRIMARY KEY,
-  user_name VARCHAR(250) NOT NULL,
-  pass_word VARCHAR(250) NOT NULL,
-  first_name VARCHAR(250) NOT NULL,
-  last_name VARCHAR(250) NOT NULL,
-  phone_number INT(15)
-);
+INSERT INTO abba_church_users (user_name, pass_word, first_name, last_name, phone_number) VALUES
+  ('christopher.harrisg@gmail.com', 'test', 'Chris', 'Harris', 5083658889);
 
