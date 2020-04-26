@@ -5,7 +5,7 @@ public class User {
     private String passWord;
     private String firstName;
     private String lastName;
-    private int phoneNumber;
+    private String phoneNumber;
 
     public String getUserName() {
         return userName;
@@ -39,11 +39,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

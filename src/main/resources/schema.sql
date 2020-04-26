@@ -6,5 +6,5 @@ CREATE TABLE abba_church_users (
   pass_word VARCHAR(250) NOT NULL,
   first_name VARCHAR(250) NOT NULL,
   last_name VARCHAR(250) NOT NULL,
-  phone_number VARCHAR(10)
+  phone_number VARCHAR(15)
 );
