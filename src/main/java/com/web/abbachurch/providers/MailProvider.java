@@ -13,6 +13,11 @@ import java.util.Properties;
 @Component
 public class MailProvider {
 
+    /**
+     * CH - sends email to user
+     * @param email - email address to send email to
+     * @return - String Response to client
+     */
     public String sendEmail(String email) {
 
         // Sender's email ID needs to be mentioned
