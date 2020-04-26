@@ -18,6 +18,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MailService } from './services/mail.service';
 import { AccountComponent } from './account/account.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountService } from './services/account.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthenticationService,
     AuthGuardService,
     LanguageService,
-    MailService],
+    MailService,
+    AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

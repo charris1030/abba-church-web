@@ -52,8 +52,8 @@
                   <label for="phone" *ngIf="language == 'en'">Telephone number</label>
                     <input class="form-control form-control-sm" id="phone" aria-describedby="phoneHelp" placeholder="">
                   </div>
-                <button type="submit" class="btn btn-primary submit-button" *ngIf="language == 'pt-br'">Criar Conta</button>
-                <button type="submit" class="btn btn-primary submit-button" *ngIf="language == 'en'">Create Account</button>
+                <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'pt-br'">Criar Conta</button>
+                <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'en'">Create Account</button>
               </form>
               </div>
               </div>
