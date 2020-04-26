@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" xmlns:https="http://www.w3.org/1999/xhtml">
       <div class="col-sm-12 col-md-3">
       </div>
     <div class="col-sm-12 col-md-6">
@@ -15,13 +15,28 @@
   </div>
   <div class="banner-top">
     <div class="col center-align">
+      <a class="social-media-icon" href="https://www.instagram.com/abbachurchmarlboro/" target="_blank">
+        <i class="fa fa-instagram fa-2x"></i>
+      </a>
+      <a class="social-media-icon" href="https://www.facebook.com/abbamarlboro/" target="_blank">
+        <i class="fa fa-facebook fa-2x"></i>
+      </a>
       <a class="social-media-icon" href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank">
         <i class="fa fa-youtube fa-2x"></i>
       </a>
       <span class="white">
-        <a href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank">
-      Culto ao vivo
-      </a>
+        <a href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank" *ngIf="language == 'pt-br'">
+          Culto ao vivo</a>
+        <a href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank" *ngIf="language == 'en'">
+          Online Service</a>
+      </span>
+      <span class="white">
+      <a href="https://www.facebook.com/abbamarlboro/" target="blank">
+        </a>
+      </span>
+    <span class="white">
+      <a href="https://www.instagram.com/abbachurchmarlboro/" target="blank">
+        </a>
     </span>
     </div>
   </div>
