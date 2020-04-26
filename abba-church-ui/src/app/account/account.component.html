@@ -40,17 +40,17 @@
                   <div class="form-group">
                     <label for="firstName" *ngIf="language == 'pt-br'">Primeiro nome</label>
                     <label for="firstName" *ngIf="language == 'en'">First name</label>
-                    <input class="form-control form-control-sm" id="firstName" aria-describedby="nameHelp" placeholder="">
+                    <input class="form-control form-control-sm"  [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" id="firstName" aria-describedby="nameHelp" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="lastName" *ngIf="language == 'pt-br'">Último nome</label>
                     <label for="lastName" *ngIf="language == 'en'">Last name</label>
-                    <input class="form-control form-control-sm" id="lastName" aria-describedby="nameHelp" placeholder="">
+                    <input class="form-control form-control-sm" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" id="lastName" aria-describedby="nameHelp" placeholder="">
                   </div>
                 <div class="form-group">
                     <label for="phone" *ngIf="language == 'pt-br'">Número de telefone</label>
                   <label for="phone" *ngIf="language == 'en'">Telephone number</label>
-                    <input class="form-control form-control-sm" id="phone" aria-describedby="phoneHelp" placeholder="">
+                    <input class="form-control form-control-sm" [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}" id="phone" aria-describedby="phoneHelp" placeholder="">
                   </div>
                 <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'pt-br'">Criar Conta</button>
                 <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'en'">Create Account</button>
