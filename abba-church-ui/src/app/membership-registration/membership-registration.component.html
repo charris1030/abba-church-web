@@ -1,48 +1,56 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-3"></div>
-      <div class="col-sm-12 col-md-6">
-        <h5>Registro de Membro Online</h5>
-      </div>
-      <div class="col-sm-12 col-md-3"></div>
+  <div class="row">
+    <div class="col-sm-12 col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <h5  *ngIf="language == 'pt-br'">Registro de Membro Online</h5>
+      <h5  *ngIf="language == 'en'">Online Member Registration</h5>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-3"></div>
-        <div class="col-sm-12 col-md-6">
-          <div class="card">
-            <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <label for="firstName">Primeiro nome</label>
-                    <input class="form-control form-control-sm" id="firstName" aria-describedby="nameHelp" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="lastName">Último nome</label>
-                    <input class="form-control form-control-sm" id="lastName" aria-describedby="nameHelp" placeholder="">
-                  </div>
-                <div class="form-group">
-                  <label for="email">Endereço de e-mail</label>
-                  <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" 
-                  placeholder="" [(ngModel)]="onlineMember.email" [ngModelOptions]="{standalone: true}">
-                  <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu email com mais ninguém.</small>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Número de telefone</label>
-                    <input class="form-control form-control-sm" id="phone" aria-describedby="phoneHelp" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="membershipType">Tipo de Membro</label>
-                    <select class="form-control form-control-sm" id="membershipType">
-                      <option>Ouro</option>
-                      <option>Diamante</option>
-                      <option>Platina</option>
-                    </select>
-                  </div>
-                <button type="submit" (click)="submitReg()" class="btn btn-primary submit-button">Enviar</button>
-              </form>
-              </div>
-              </div>
+    <div class="col-sm-12 col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="firstName" *ngIf="language == 'pt-br'">Primeiro nome</label>
+              <label for="firstName" *ngIf="language == 'en'">First name</label>
+              <input class="form-control form-control-sm" id="firstName" aria-describedby="nameHelp" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="lastName" *ngIf="language == 'pt-br'">Último nome</label>
+              <label for="lastName" *ngIf="language == 'en'">Last name</label>
+              <input class="form-control form-control-sm" id="lastName" aria-describedby="nameHelp" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="email" *ngIf="language == 'pt-br'">Endereço de e-mail</label>
+              <label for="email" *ngIf="language == 'en'">Email address</label>
+              <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp"
+                     placeholder="" [(ngModel)]="onlineMember.email" [ngModelOptions]="{standalone: true}">
+              <small id="emailHelp" class="form-text text-muted" *ngIf="language == 'pt-br'">Nunca compartilharemos seu email com mais
+                ninguém.</small>
+              <small id="emailHelp" class="form-text text-muted" *ngIf="language == 'en'">We do not share your email with anyone</small>
+            </div>
+            <div class="form-group">
+              <label for="phone" *ngIf="language == 'pt-br'">Número de telefone</label>
+              <label for="phone" *ngIf="language == 'en'">Telephone number</label>
+              <input class="form-control form-control-sm" id="phone" aria-describedby="phoneHelp" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="membershipType" *ngIf="language == 'pt-br'">Tipo de Membro</label>
+              <label for="membershipType" *ngIf="language == 'en'">Type of Member</label>
+              <select class="form-control form-control-sm" id="membershipType">
+                <option>Ouro</option>
+                <option>Diamante</option>
+                <option>Platina</option>
+              </select>
+            </div>
+            <button type="submit" (click)="submitReg()" class="btn btn-primary submit-button">Enviar</button>
+          </form>
         </div>
-        <div class="col-sm-12 col-md-3"></div>
+      </div>
     </div>
+    <div class="col-sm-12 col-md-3"></div>
+  </div>
 </div>

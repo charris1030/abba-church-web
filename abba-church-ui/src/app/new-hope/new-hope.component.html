@@ -1,3 +1,99 @@
+<div class="row" xmlns:https="http://www.w3.org/1999/xhtml">
+  <div class="col-sm-12 col-md-3">
+  </div>
+  <div class="col-sm-12 col-md-6">
+  </div>
+  <div class="col-sm-12 col-md-3"></div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="section-half image-bg">
+  <div class="section-content">
+    <h4 class="white" *ngIf="language == 'pt-br'">Bem-vindo à New Hope Church Boston</h4>
+    <h4 class="white" *ngIf="language == 'en'">Welcome to New Hope Church Boston</h4>
+  </div>
+  <div class="banner-top">
+    <div class="col center-align">
+      <a class="social-media-icon" href="https://www.instagram.com/abbachurchmarlboro/" target="_blank">
+        <i class="fa fa-instagram fa-2x"></i>
+      </a>
+      <a class="social-media-icon" href="https://www.facebook.com/abbamarlboro/" target="_blank">
+        <i class="fa fa-facebook fa-2x"></i>
+      </a>
+      <a class="social-media-icon" href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank">
+        <i class="fa fa-youtube fa-2x"></i>
+      </a>
+      <span class="white">
+        <a href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank" *ngIf="language == 'pt-br'">
+          Culto ao vivo</a>
+        <a href="https://www.youtube.com/channel/UC2DFjsjo_RxrTN9A1SyHgjQ" target="_blank" *ngIf="language == 'en'">
+          Online Service</a>
+      </span>
+      <span class="white">
+      <a href="https://www.facebook.com/abbamarlboro/" target="blank">
+        </a>
+      </span>
+      <span class="white">
+      <a href="https://www.instagram.com/abbachurchmarlboro/" target="blank">
+        </a>
+    </span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row spacing margin-top">
+    <div class="col-sm-12 col-md-6">
+      <div class="card equal-h">
+        <div class="card-body">
+          <h4 *ngIf="language == 'pt-br'">Endereço</h4>
+          <h4 *ngIf="language == 'en'">Address</h4>
+          <span class="address">
+              <a href="javascript:void(0);" (click)="openAddress()" class="address">
+                355 Franklin st. <br />
+                Melrose, MA </a> <br />
+                </span>
+          <span class="phone-num">
+                            T: <a href="tel:617-605-2976">(617) 605-2976</a>
+                            </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card equal-h">
+        <div class="card-body">
+          <h4 *ngIf="language == 'pt-br'">Dias de Culto</h4>
+          <h4 *ngIf="language == 'en'">Service Schedule</h4>
+          <div class="row">
+            <div class="col-sm-12 col-md-2">
+              <h6 *ngIf="language == 'pt-br'">Domingo</h6>
+              <h6 *ngIf="language == 'en'">Sunday</h6>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <h6 *ngIf="language == 'pt-br'">Segunda</h6>
+              <h6 *ngIf="language == 'en'">Monday</h6>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <h6 *ngIf="language == 'pt-br'">Quinta</h6>
+              <h6 *ngIf="language == 'en'">Thursday</h6>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <h6 *ngIf="language == 'pt-br'">Sexta</h6>
+              <h6 *ngIf="language == 'en'">Friday</h6>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <h6 *ngIf="language == 'pt-br'">Sábado</h6>
+              <h6 *ngIf="language == 'en'">Saturday</h6>
+            </div>
+            <div class="col-sm-12 col-md-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!--<div class="top-nav">
     <div class="container">
         <h4><a routerLink="/">Abba Church</a> <span class="sub"> New Hope Boston</span></h4>
@@ -10,7 +106,7 @@
         <div class="container">
             <div class="row">
               <div class="col-4">
-                <div class="address">           
+                <div class="address">
                     355 Franklin St.<br />
                     Melrose, Massachusetts 02176<br />
                     (617) 605-2976

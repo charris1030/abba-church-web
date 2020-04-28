@@ -19,6 +19,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MailService } from './services/mail.service';
 import { AccountComponent } from './account/account.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AccountService } from './services/account.service';
 
 @NgModule({
@@ -39,7 +41,8 @@ import { AccountService } from './services/account.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthenticationService,
