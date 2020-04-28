@@ -5,14 +5,14 @@
   </a>
      <a class="sub-menu-option" *ngIf="language=='pt-br' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
      <a class="sub-menu-option" *ngIf="language=='pt-br' && showLocations"  (click)="closeSideNav()" routerLink="/new-hope">New Hope Church Boston</a>
-  <a *ngIf="language=='pt-br'" href="#">Doações</a>
+  <a *ngIf="language=='pt-br'" routerLink="/donations" (click)="closeSideNav()">Doações</a>
   <a *ngIf="language=='pt-br'" routerLink="/membership" (click)="closeSideNav()">Registro de Membro Online</a>
   <a *ngIf="language=='pt-br'" routerLink="/login" (click)="closeSideNav()">Acessar Conta</a>
   <a *ngIf="language=='en'" outerLink="/about-us" (click)="closeSideNav()">About Us</a>
   <a *ngIf="language=='en'" href="javascript:void(0)" (click)="showLocationOptions()">Locations <i  [ngClass]="{'fa-plus': !showLocations, 'fa-minus': showLocations}" class="fa"></i></a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/new-hope">New Hope Church Boston</a>
-  <a *ngIf="language=='en'" href="#">Donations</a>
+  <a *ngIf="language=='en'" routerLink="/donations" (click)="closeSideNav()">Donations</a>
   <a *ngIf="language=='en'" routerLink="/membership" (click)="closeSideNav()">Online Member Registration</a>
   <a *ngIf="language=='en'" routerLink="/login" (click)="closeSideNav()">Account Access</a>
 </div>

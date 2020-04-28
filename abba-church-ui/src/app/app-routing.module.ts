@@ -8,6 +8,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { AdminComponent } from './admin/admin.component';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { HomeComponent } from './home/home.component';
+import { DonationsComponent } from './donations/donations.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AccountComponent } from './account/account.component';
 
@@ -33,6 +34,11 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: 'prefix'
   },
+  {
+      path: 'donations',
+      component: DonationsComponent,
+      pathMatch: 'prefix'
+    },
   {
       path: 'logout',
       component: LogoutComponent,

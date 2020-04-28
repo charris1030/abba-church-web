@@ -18,7 +18,7 @@ export class AccountComponent implements OnInit {
   createAccountResponse: any;
 
   constructor(private router: Router,
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     protected languageService: LanguageService,
     public accountService: AccountService) {
       let action = this.route.snapshot.paramMap.get('action');
@@ -39,7 +39,7 @@ export class AccountComponent implements OnInit {
     this.accountService.createAccount(this.user).subscribe((resp: any)=>{
       console.log("Create New Account Response:", resp);
       this.createAccountResponse = resp;
-    })  
+    })
 
   }
 

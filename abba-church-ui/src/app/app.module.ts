@@ -12,6 +12,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
+import { DonationsComponent } from './donations/donations.component';
 import { HomeComponent } from './home/home.component';
 import { LanguageService } from './services/language.service';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -30,7 +31,8 @@ import { AccountService } from './services/account.service';
     MembershipRegistrationComponent,
     HomeComponent,
     AboutUsComponent,
-    AccountComponent
+    AccountComponent,
+    DonationsComponent
   ],
   imports: [
     BrowserModule,
