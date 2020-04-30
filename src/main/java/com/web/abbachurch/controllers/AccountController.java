@@ -25,7 +25,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/createAccount", method = RequestMethod.POST,
             produces = "application/json", consumes = "application/json")
-    public String sendMail(@RequestBody User user) {
+    public String createAccount(@RequestBody User user) {
 
         log.info("Creating new Abba Church Account for User {}", user);
 
