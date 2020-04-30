@@ -30,7 +30,7 @@ public class AccountController {
         log.info("Creating new Abba Church Account for User {}", user);
 
         String responseStr;
-        int createUserResp;
+        long createUserResp;
 
         responseStr = "Abba Church Account Creation Succeeded";
 

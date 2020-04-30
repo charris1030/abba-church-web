@@ -9,10 +9,18 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
 @Repository
 public class AccountDAO {
 
     private static final Logger log = LoggerFactory.getLogger(AccountDAO.class);
+
+    private static final String INSERT_NEW_ACCOUNT = "insert into abba_church_users " +
+            "(user_name, pass_word, first_name, last_name, phone_number) values(?,?,?,?,?)";
+
+    private static final String GET_ACCOUNT_BY_ID = "select * from abba_church_users where id=?";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -21,15 +29,22 @@ public class AccountDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public int insert(User user) {
+    public long insert(User user) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
-        int newRecordId = 0;
-        jdbcTemplate.update(
-                "insert into abba_church_users (user_name, pass_word, first_name, last_name, phone_number) " +
-                        "values(?,?,?,?,?)",
-                user.getUserName(), user.getPassWord(), user.getFirstName(), user.getLastName(), user.getPhoneNumber());
-        log.info("ID for new account record: {}", newRecordId);
-        return newRecordId;
+        jdbcTemplate.update(connection -> {
+            PreparedStatement ps = connection
+                    .prepareStatement(INSERT_NEW_ACCOUNT, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, user.getUserName());
+            ps.setString(2, user.getPassWord());
+            ps.setString(3, user.getFirstName());
+            ps.setString(4, user.getLastName());
+            ps.setString(5, user.getPhoneNumber());
+            return ps;
+        }, keyHolder);
+
+        log.info("Key for new user account: {}", keyHolder.getKey());
+
+        return (long) keyHolder.getKey();
     }
 
 }
