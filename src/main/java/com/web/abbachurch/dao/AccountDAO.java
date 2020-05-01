@@ -4,6 +4,7 @@ import com.web.abbachurch.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -29,6 +30,13 @@ public class AccountDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    public User createAccountAndReturnUser(User user) {
+        User newUser;
+        long newUserId = insert(user);
+        newUser = getUser(newUserId);
+        return newUser;
+    }
+
     public long insert(User user) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
@@ -46,5 +54,19 @@ public class AccountDAO {
 
         return (long) keyHolder.getKey();
     }
+
+    public User getUser(long id) {
+
+        User user = new User();
+
+        try {
+            user = jdbcTemplate.queryForObject(GET_ACCOUNT_BY_ID, new Object[]{id}, new BeanPropertyRowMapper<>(User.class));
+        } catch (Exception e) {
+            log.error("Error getting User for id {}: [{}]", id, e.getStackTrace());
+        }
+
+        return user;
+    }
+
 
 }

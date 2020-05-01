@@ -25,23 +25,20 @@ public class AccountController {
      */
     @RequestMapping(value = "/createAccount", method = RequestMethod.POST,
             produces = "application/json", consumes = "application/json")
-    public String createAccount(@RequestBody User user) {
+    public User createAccount(@RequestBody User user) {
 
         log.info("Creating new Abba Church Account for User {}", user);
 
-        String responseStr;
-        long createUserResp;
-
-        responseStr = "Abba Church Account Creation Succeeded";
+        User newUser = new User();
 
         try {
-            createUserResp = accountDAO.insert(user);
-            log.info("Create User Response {}", createUserResp);
+            newUser = accountDAO.createAccountAndReturnUser(user);
+            log.info("Create User Response {}", user);
         } catch (Exception e) {
             log.error("Error when creating user account: ", e.getCause());
         }
 
-        return responseStr;
+        return newUser;
     }
 
 }
