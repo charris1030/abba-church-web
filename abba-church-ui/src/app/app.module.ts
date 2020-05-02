@@ -22,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AccountService } from './services/account.service';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { AccountService } from './services/account.service';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPasswordStrengthModule.forRoot()
   ],
   providers: [
     AuthenticationService,
