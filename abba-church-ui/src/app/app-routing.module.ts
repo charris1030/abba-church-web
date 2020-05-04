@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DonationsComponent } from './donations/donations.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AccountComponent } from './account/account.component';
+import { AccountSuccessComponent } from './account/account-success.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,11 @@ const routes: Routes = [
           component: AccountComponent,
           pathMatch: 'prefix'
      },
+      {
+          path: 'account-success',
+          component: AccountSuccessComponent,
+          pathMatch: 'prefix'
+       },
   {
     path: '',
     redirectTo: 'home',

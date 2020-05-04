@@ -1,5 +1,5 @@
 <div class="container-fluid account-content">
-    <div class="row">
+  <div class="row" [hidden]="accountAddUpdateSent && accountCreationSuccess">
         <div class="col-sm-12 col-md-3"></div>
       <div class="col-sm-12 col-md-6">
         <h5 *ngIf="action=='new' && language == 'pt-br'">Criar Nova Conta</h5>
@@ -9,7 +9,7 @@
       </div>
       <div class="col-sm-12 col-md-3"></div>
     </div>
-    <div class="row">
+    <div class="row" [hidden]="accountAddUpdateSent && accountCreationSuccess">
         <div class="col-sm-12 col-md-3"></div>
         <div class="col-sm-12 col-md-6">
           <div class="card">
@@ -20,22 +20,21 @@
                   <label for="email"  *ngIf="language == 'en'">Email Address</label>
                   <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp"
                   placeholder="" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
-                  <small id="emailHelp" class="form-text text-muted" *ngIf="language == 'pt-br'">Nunca compartilharemos seu email com mais ninguém.</small>
-                  <small id="emailHelp" class="form-text text-muted" *ngIf="language == 'en'">Never share your email with anyone</small>
+                  <small id="emailHelpPt" class="form-text text-muted" *ngIf="language == 'pt-br'">Nunca compartilharemos seu email com mais ninguém.</small>
+                  <small id="emailHelpEn" class="form-text text-muted" *ngIf="language == 'en'">Never share your email with anyone</small>
                 </div>
                 <div class="form-group">
                     <label for="password1" *ngIf="language == 'pt-br'">Senha</label>
                     <label for="password1" *ngIf="language == 'en'">Password</label>
                     <input type="password" class="form-control form-control-sm" id="password1" aria-describedby="pwHelp"
                     placeholder="" [(ngModel)]="user.passWord" [ngModelOptions]="{standalone: true}">
-                    <small id="pwHelp" class="form-text text-muted" *ngIf="language == 'pt-br'">Digite uma senha segura</small>
-                    <small id="pwHelp" class="form-text text-muted" *ngIf="language == 'en'">Type a safe password</small>
+                    <small id="pwHelpPt" class="form-text text-muted" *ngIf="language == 'pt-br'">Digite uma senha segura</small>
+                    <small id="pwHelpEn" class="form-text text-muted" *ngIf="language == 'en'">Type a safe password</small>
                   </div>
                   <div class="form-group">
-                    <!-- <label for="password2"></label> -->
                     <input type="password" class="form-control form-control-sm" id="password2" aria-describedby="pwHelp" placeholder="">
-                    <small id="pwHelp" class="form-text text-muted" *ngIf="language == 'pt-br'">Digite a senha uma segunda vez</small>
-                    <small id="pwHelp" class="form-text text-muted" *ngIf="language == 'en'">Type the password a second time</small>
+                    <small id="pwHelp2Pt" class="form-text text-muted" *ngIf="language == 'pt-br'">Digite a senha uma segunda vez</small>
+                    <small id="pwHelp2En" class="form-text text-muted" *ngIf="language == 'en'">Type the password a second time</small>
                   </div>
               <div class="form-group">
                     <label for="firstName" *ngIf="language == 'pt-br'">Primeiro nome</label>
@@ -60,4 +59,15 @@
         </div>
         <div class="col-sm-12 col-md-3"></div>
     </div>
+  <div class="row" *ngIf="accountAddUpdateSent && accountCreationSuccess">
+    <div class="col-sm-12 col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <app-account-success [user]="user"></app-account-success>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-3"></div>
+  </div>
 </div>

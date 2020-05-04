@@ -17,7 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { LanguageService } from './services/language.service';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MailService } from './services/mail.service';
-import { AccountComponent } from './account/account.component'
+import { AccountComponent } from './account/account.component';
+import { AccountSuccessComponent } from './account/account-success.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -34,7 +35,8 @@ import { AccountService } from './services/account.service';
     HomeComponent,
     AboutUsComponent,
     AccountComponent,
-    DonationsComponent
+    DonationsComponent,
+    AccountSuccessComponent
   ],
   imports: [
     BrowserModule,

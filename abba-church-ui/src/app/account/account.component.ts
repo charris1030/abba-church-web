@@ -12,6 +12,8 @@ import { AccountService } from '../services/account.service';
 })
 export class AccountComponent implements OnInit {
 
+  accountCreationSuccess: boolean = false;
+  accountAddUpdateSent: boolean = false;
   language: string;
   action: string = 'new';
   user: User = new User();
@@ -36,10 +38,16 @@ export class AccountComponent implements OnInit {
    */
   public createAccount() {
     console.log("Creating new account for user:", this.user);
+    this.accountAddUpdateSent = true;
     this.accountService.createAccount(this.user).subscribe((resp: any)=>{
       console.log("Create New Account Response:", resp);
+      if(resp) {
       this.createAccountResponse = resp;
-    })
+      this.accountCreationSuccess = true;
+      } else {
+        this.accountCreationSuccess = false;
+      }
+    });
 
   }
 
