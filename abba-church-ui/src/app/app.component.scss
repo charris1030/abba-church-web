@@ -4,6 +4,10 @@
     height: 100%;
 }
 
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #0f2862 !important;
+}
+
 .logo-image {
     height: 150px;
 }

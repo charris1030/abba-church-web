@@ -18,6 +18,15 @@ h5 {
 .account-content {
     margin-bottom: 20px !important;
 }
+
+.creating-account {
+  text-align: center !important;
+}
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #0f2862 !important;
+}
+
 .strength-meter {
     font-size: 0.8rem;
     .strength-text {

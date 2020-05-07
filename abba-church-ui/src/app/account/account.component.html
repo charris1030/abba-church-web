@@ -1,5 +1,5 @@
 <div class="container-fluid account-content">
-  <div class="row" [hidden]="accountAddUpdateSent && accountCreationSuccess">
+  <div class="row" [hidden]="(accountAddUpdateSent && accountCreationSuccess) || addUpdateAccountInProgress">
         <div class="col-sm-12 col-md-3"></div>
       <div class="col-sm-12 col-md-6">
         <h5 *ngIf="action=='new' && language == 'pt-br'">Criar Nova Conta</h5>
@@ -9,7 +9,24 @@
       </div>
       <div class="col-sm-12 col-md-3"></div>
     </div>
-    <div class="row" [hidden]="accountAddUpdateSent && accountCreationSuccess">
+  <div [hidden]="!addUpdateAccountInProgress || accountCreationSuccess">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 creating-account">
+        <h5 *ngIf="action=='new' && language == 'pt-br'">Criando Conta...</h5>
+        <h5 *ngIf="action=='new' && language == 'en'">Creating Account...</h5>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+        <mat-progress-spinner
+          style="margin:0 auto;"
+          *ngIf="addUpdateAccountInProgress"
+          [mode] = "mode">
+      </mat-progress-spinner>
+  </div>
+  </div>
+    <div class="row" [hidden]="(accountAddUpdateSent && accountCreationSuccess) || addUpdateAccountInProgress">
         <div class="col-sm-12 col-md-3"></div>
         <div class="col-sm-12 col-md-6">
           <div class="card">
@@ -49,7 +66,8 @@
                 <div class="form-group">
                     <label for="phone" *ngIf="language == 'pt-br'">Número de telefone</label>
                   <label for="phone" *ngIf="language == 'en'">Telephone number</label>
-                    <input class="form-control form-control-sm" [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}" id="phone" aria-describedby="phoneHelp" placeholder="">
+                    <input class="form-control form-control-sm" [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}"
+                           id="phone" aria-describedby="phoneHelp" placeholder="" maxlength="10">
                   </div>
                 <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'pt-br'">Criar Conta</button>
                 <button type="submit" (click)="createAccount()" class="btn btn-primary submit-button" *ngIf="language == 'en'">Create Account</button>

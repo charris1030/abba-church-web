@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS abba_church_users;
+DROP TABLE IF EXISTS new_abba_church_users;
 
-CREATE TABLE abba_church_users (
+CREATE TABLE new_abba_church_users (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   user_name VARCHAR(250) NOT NULL,
   pass_word VARCHAR(250) NOT NULL,
