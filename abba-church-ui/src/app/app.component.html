@@ -6,14 +6,14 @@
      <a class="sub-menu-option" *ngIf="language=='pt-br' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
      <a class="sub-menu-option" *ngIf="language=='pt-br' && showLocations"  (click)="closeSideNav()" routerLink="/new-hope">New Hope Church Boston</a>
   <a *ngIf="language=='pt-br'" routerLink="/donations" (click)="closeSideNav()">Doações</a>
-  <a *ngIf="language=='pt-br'" routerLink="/membership" (click)="closeSideNav()">Registro de Membro Online</a>
+  <a *ngIf="language=='pt-br'" routerLink="/membership" (click)="closeSideNav()">NewAbba.TV</a>
   <a *ngIf="language=='pt-br'" routerLink="/login" (click)="closeSideNav()">Acessar Conta</a>
   <a *ngIf="language=='en'" outerLink="/about-us" (click)="closeSideNav()">About Us</a>
   <a *ngIf="language=='en'" href="javascript:void(0)" (click)="showLocationOptions()">Locations <i  [ngClass]="{'fa-plus': !showLocations, 'fa-minus': showLocations}" class="fa"></i></a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/marlboro">Abba Church Marlboro</a>
   <a class="sub-menu-option" *ngIf="language=='en' && showLocations"  (click)="closeSideNav()" routerLink="/new-hope">New Hope Church Boston</a>
   <a *ngIf="language=='en'" routerLink="/donations" (click)="closeSideNav()">Donations</a>
-  <a *ngIf="language=='en'" routerLink="/membership" (click)="closeSideNav()">Online Member Registration</a>
+  <a *ngIf="language=='en'" routerLink="/membership" (click)="closeSideNav()">NewAbba.TV</a>
   <a *ngIf="language=='en'" routerLink="/login" (click)="closeSideNav()">Account Access</a>
 </div>
 
@@ -31,12 +31,12 @@
         <div class="f-right">
           <span (click)="showLanguageOptions()"
           *ngIf="language=='pt-br'"
-          style="font-size:20px;cursor:pointer;color:#0f2862;margin-right: 1px;">PT</span>
+          class="lang-option">PT</span>
           <span (click)="showLanguageOptions()"
           *ngIf="language=='en'"
-          style="font-size:20px;cursor:pointer;color:#0f2862;margin-right: 1px;">EN</span>
-          <img (click)="showLanguageOptions()" style="margin-right: 15px; cursor:pointer;" src="../assets/images/icons/chevron-down.svg" alt="" width="20" height="20" title="">
-          <span style="font-size:30px;cursor:pointer;color:#0f2862;font-weight:bold;" (click)="openSideNav()">&#9776;</span>
+                class="lang-option">EN</span>
+          <img (click)="showLanguageOptions()" src="../assets/images/icons/chevron-down.svg" class="chev-down" alt="" width="20" height="20" title="">
+          <span class="menu-icon" (click)="openSideNav()">&#9776;</span>
         </div>
     </div>
     </div>

@@ -117,7 +117,7 @@
   }
 
 .fa {
-    font-size: 20px !important;
+    font-size: 15px !important;
 }
 
 .f-right {
@@ -149,7 +149,7 @@
 }
 
 .logo {
-  height: 100px;
+  height: 115px;
 }
 
 .lang-options {
@@ -157,7 +157,7 @@
     top: 45px;
     right: 70px;
     height: 30px;
-    background-color: #0f2862;
+    background-color: #000; //#0f2862;
     padding: 5px;
     width: 100px;
     border-radius: 5px;
@@ -169,10 +169,29 @@
         z-index: -1;
     }
     a:hover {
-        color: #B8B8B8 !important;
+        color: #006699 !important; //#B8B8B8 !important;
     }
 }
 
+.lang-option {
+  font-size:20px;
+  cursor:pointer;
+  color: #000; //#0f2862;
+  margin-right: 1px;
+}
+
+.chev-down {
+  margin-right: 15px;
+  cursor:pointer;
+  color: #000;
+}
+
+.menu-icon {
+font-size:30px;
+cursor:pointer;
+color: #000; //#0f2862;
+font-weight:bold;
+}
 
 /* The side navigation menu */
 .sidenav {
@@ -182,7 +201,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
-    background-color: #0f2862;
+    background-color: #000; //#0f2862;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -192,25 +211,25 @@
   .sidenav a {
     padding: 6px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
     &.sub-menu-option {
       margin-left: 10px;
-      font-size: 20px;
+      font-size: 15px;
    }
   }
 
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: #006699; //#f1f1f1;
   }
 
   /* Position and style the close button (top right corner) */
   .sidenav .closebtn {
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;

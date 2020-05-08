@@ -28,6 +28,7 @@ ngOnInit(): void {
 }
 
 openSideNav() {
+  this.showLanguageMenu = false;
   this.navSide.nativeElement.style.width = "350px";
 }
 
