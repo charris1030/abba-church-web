@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
       this.languageService.getLangValue().subscribe((value) => {
-        this.language = value;
-      });
+                 this.language = value;
+               });
   }
 
 }
